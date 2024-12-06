@@ -96,3 +96,25 @@ ENV/
 
 # For mac
 .DS_Store
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8.tar.gz
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32.tar.gz
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/checkpoint/checkpoint
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/checkpoint/ckpt-0.data-00000-of-00001
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/checkpoint/ckpt-0.index
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/saved_model/saved_model.pb
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/saved_model/variables/variables.data-00000-of-00001
+research/object_detection/colab_tutorials/centernet_hg104_512x512_kpts_coco17_tpu-32/saved_model/variables/variables.index
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/pipeline.config
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/checkpoint/checkpoint
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/checkpoint/ckpt-0.data-00000-of-00001
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/checkpoint/ckpt-0.index
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/saved_model/saved_model.pb
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/saved_model/variables/variables.data-00000-of-00001
+research/object_detection/faster_rcnn_inception_resnet_v2_640x640_coco17_tpu-8/saved_model/variables/variables.index
+research/object_detection/test_data/checkpoint/checkpoint
+research/object_detection/test_data/checkpoint/ckpt-0.data-00000-of-00001
+research/object_detection/test_data/checkpoint/ckpt-0.index
+training/faster_rcnn_inception_v2_pets.config
+
+# Misc stuff
+research/object_detection/images
