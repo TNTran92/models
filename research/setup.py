@@ -23,7 +23,7 @@ REQUIRED_PACKAGES = [
     'keras',
     'pyparsing==2.4.7',  # TODO(b/204103388)
     'sacrebleu<=2.2.0',  # https://github.com/mjpost/sacrebleu/issues/209
-    'tensorflow[and-cuda]==2.15.1'
+    'tensorflow[and-cuda]==2.13.1'
 ]
 
 setup(
