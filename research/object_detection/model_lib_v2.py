@@ -548,6 +548,27 @@ def train_loop(
         model_config=model_config, is_training=True,
         add_summaries=record_summaries)
 
+     ################################ Hacking #######################################################################
+    ################################ This part freeze all but the classification head at the end ###################
+    fake_box_predictor = tf.compat.v2.train.Checkpoint(
+    _base_tower_layers_for_heads=detection_model._box_predictor._base_tower_layers_for_heads,
+    # _prediction_heads=detection_model._box_predictor._prediction_heads,
+    #    (i.e., the classification head that we *will not* restore)
+    _box_prediction_head=detection_model._box_predictor._box_prediction_head,
+    )
+    fake_model = tf.compat.v2.train.Checkpoint(
+          _feature_extractor=detection_model._feature_extractor,
+          _box_predictor=fake_box_predictor)
+    ckpt = tf.compat.v2.train.Checkpoint(model=fake_model)
+    ckpt.restore(train_config.fine_tune_checkpoint).expect_partial()
+
+    # Run model through a dummy image so that variables are created
+    image, shapes = detection_model.preprocess(tf.zeros([1, 640, 640, 3]))
+    prediction_dict = detection_model.predict(image, shapes)
+    _ = detection_model.postprocess(prediction_dict, shapes)
+    print('Weights restored!')
+    ##############################################################################################################
+
     def train_dataset_fn(input_context):
       """Callable to create train input."""
       # Create the inputs.
